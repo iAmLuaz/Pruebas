@@ -24,7 +24,7 @@ h4{
     display: flex;
     flex-flow: row nowrap;
     height: 10vh;
-    width: 100%;
+    width: auto;
     justify-content: center;
     align-items: center;
     border: solid firebrick;
@@ -70,4 +70,13 @@ h4{
 }
 .personid::before{
     content: 'ID: ';
+}
+.boxhidden{
+    display:none;
+}
+.form{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
 }
