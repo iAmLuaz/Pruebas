@@ -12,9 +12,18 @@
         <div class="btn-container" id="btn-container">
             <form action="" id="form" class="form">
                 <p>Buscar:&nbsp;</p> 
-                <input type="text" class="searcher" id="searcher" placeholder="Buscar..."></input>
+                <input type="text" autocomplete="off" class="searcher" id="searcher" placeholder="Buscar..."></input>
+                <ul class="filter" id="filter">
+                    <li class="topfilter">Filtros
+                        <ul>
+                            <li id="filtermember"><p>Membres&iacute;a</p></li>
+                            <li><p>Estado</p></li>
+                            <li><p>Edad</p></li>
+                            <li><p>Grado Escolar</p></li>
+                        </ul>
+                    </li>
+                </ul>
             </form>
-            <button class="btn" id="btn">Buscar</button>
         </div>
         <div class="box-container" id="box-container">
             <div id="elementos" class="elementos"></div>

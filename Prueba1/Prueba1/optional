@@ -1,0 +1,13 @@
+//Recibir valores de todos los datos
+let names = document.querySelectorAll('div.name');
+let membership = document.querySelectorAll('div.membership');
+let address = document.querySelectorAll('div.address');
+
+//Lugar donde se almacena el Array de Datos
+let nameArray = [];
+
+//Obtener la cadena completa de nombres, convertirlos a mayuscula y quitarle acentos
+for (let i = 0; i < names.length; i++) {
+    var currentName = names[i].innerHTML;
+    nameArray.push(removeAccents(currentName).toUpperCase()+'<br>');
+}

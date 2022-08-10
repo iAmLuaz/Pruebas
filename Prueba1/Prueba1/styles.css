@@ -4,6 +4,7 @@ html, body{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; 
+    overflow-y: scroll;
 }
 h4{
     margin: 0.2rem 0;
@@ -23,19 +24,20 @@ h4{
 .btn-container{
     display: flex;
     flex-flow: row nowrap;
-    height: 10vh;
+    height: auto;
     width: auto;
     justify-content: center;
     align-items: center;
     border: solid firebrick;
+    padding: 1rem 0;
 }
 .box-container{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
     width: 100%;
-    height: 90vh;
+    height: auto;
 }
 .box{
     background-color: antiquewhite;
@@ -50,6 +52,7 @@ h4{
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text; 
+    transition: 1s;
 }
 .name::before{
     content: 'Nombre: ';
@@ -73,10 +76,84 @@ h4{
 }
 .boxhidden{
     display:none;
+    transition: 1s;
 }
 .form{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+.searcher{
+    border-radius: 1rem;
+    border: solid 0.1rem grey;
+    height: 4vh;
+    width: 50%;
+    margin: 0 1rem;
+}
+.remark{
+    font-weight: 900;
+}
+#filter li {
+    background-color:#2e518b;
+    list-style: none;
+}
+#filter {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+#filter p {
+  display:block;
+  color:#fff;
+  font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  text-decoration:none;
+  font-weight:400;
+  font-size:15px;
+  height: 2vh;
+  margin: 0 2rem;
+}
+
+#filter li:hover {
+  background:#5b78a7;
+  transition: 0.5s;
+}
+#filter ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  padding:0;
+}
+#filter ul li {
+  float:none;
+  width:150px
+}
+#filter ul a {
+  line-height:120%;
+}
+#filter li:hover > ul {
+  display:block;
+  transition: 0.5s;
+}
+#filter li{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position:relative;
+    float:left;
+    padding: 1rem;
+    color:#fff;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin: 0rem;
+    width: 100%;
+}
+#filter{
+    display: flex;
+    width: auto;
 }
